@@ -29,8 +29,9 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"pact:publishV1": "set PACT_BROKER_BASE_URL=https://dzmitryjivchenkov.pactflow.io && set PACT_BROKER_TOKEN=pypE98_Zpteu2zDiDNEruw && node ./publish.pact.js",
-		"pact:publish": "node ./publish.pact.js"
+		"set:env": "export PACT_BROKER_LOG_LEVEL=debug && export PACT_BROKER_LOG_FORMAT=json && export PACT_BROKER_HTTP_DEBUG_LOGGING_ENABLED=true && export PACT_BROKER_LOG_STREAM=stdout && export PACT_BROKER_BASE_URL=https://dzmitryjivchenkov.pactflow.io && export PACT_BROKER_TOKEN=pypE98_Zpteu2zDiDNEruw",
+		"pact:publish": "node ./publish.pact.js",
+		"publish": "./publish.sh"
 	},
 	"eslintConfig": {
 		"extends": [
