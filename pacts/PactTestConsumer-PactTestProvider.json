@@ -1,0 +1,119 @@
+{
+  "consumer": {
+    "name": "PactTestConsumer"
+  },
+  "interactions": [
+    {
+      "description": "get all filters config",
+      "providerStates": [
+        {
+          "name": "I have a list of filters config"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/filters/getFiltersConfig"
+      },
+      "response": {
+        "body": [
+          {
+            "defaultValues": null,
+            "list": [
+              {
+                "count": 50,
+                "currentPage": null,
+                "pagesCount": null,
+                "pagination": false,
+                "values": [
+                  {
+                    "elementId": "string()",
+                    "name": "string()",
+                    "value": "string()"
+                  }
+                ]
+              }
+            ],
+            "title": "Отправитель",
+            "type": "singleSelect"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request for all users with the builder pattern",
+      "providerStates": [
+        {
+          "name": "I have a list of users"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/users"
+      },
+      "response": {
+        "body": {
+          "data": [
+            {
+              "id": 1,
+              "isPrivate": true,
+              "name": "John",
+              "surname": "Doe",
+              "vip": true
+            },
+            {
+              "id": 2,
+              "isPrivate": true,
+              "name": "Roland",
+              "surname": "Smith",
+              "vip": true
+            }
+          ],
+          "message": "findAll"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {},
+          "status": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.5.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.19",
+      "models": "1.1.19"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "PactTestProvider"
+  }
+}
