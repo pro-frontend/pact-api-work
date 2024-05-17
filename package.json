@@ -29,9 +29,8 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"set:env": "export PACT_BROKER_LOG_LEVEL=debug && export PACT_BROKER_LOG_FORMAT=json && export PACT_BROKER_HTTP_DEBUG_LOGGING_ENABLED=true && export PACT_BROKER_LOG_STREAM=stdout && export PACT_BROKER_BASE_URL=https://dzmitryjivchenkov.pactflow.io && export PACT_BROKER_TOKEN=pypE98_Zpteu2zDiDNEruw",
-		"pact:publish": "node ./publish.pact.js",
-		"publish": "./publish.sh"
+		"make:runnable": "chmod +x publish.sh",
+		"publish": "yarn run make:runnable && ./publish.sh"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -50,5 +49,6 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	}
+	},
+	"packageManager": "yarn@4.2.2"
 }

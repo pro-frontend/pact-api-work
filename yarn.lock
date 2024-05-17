@@ -2523,9 +2523,9 @@ __metadata:
   linkType: hard
 
 "@rushstack/eslint-patch@npm:^1.1.0":
-  version: 1.10.2
-  resolution: "@rushstack/eslint-patch@npm:1.10.2"
-  checksum: 10c0/3712b8994bfed0968d4c4f21ff10bf5f2abb47f47d65d4e616de4311d2f372f2528b03b1d4e0dcaa7392f8626ccdf114e753db4f790e92436fc5a4e52195d181
+  version: 1.10.3
+  resolution: "@rushstack/eslint-patch@npm:1.10.3"
+  checksum: 10c0/ec75d23fba30fc5f3303109181ce81a686f7b5660b6e06d454cd7b74a635bd68d5b28300ddd6e2a53b6cb10a876246e952e12fa058af32b2fa29b73744f00521
   languageName: node
   linkType: hard
 
@@ -5834,9 +5834,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.668":
-  version: 1.4.772
-  resolution: "electron-to-chromium@npm:1.4.772"
-  checksum: 10c0/79ea8f4d41b64e092677e801fd88affe0089e4e76dbbecf78fe2831a66d4b4ef6d0da6ad59be8079eb7b7f03c72d1667e81d13a803e343b8bd4ade3e3f1f7b49
+  version: 1.4.773
+  resolution: "electron-to-chromium@npm:1.4.773"
+  checksum: 10c0/eef684e2d64848418080715a76bc4147373d75ade07f65e64a97a3efd52d8c83dd8dd0daadba0d5ca891e3738144f8e97e1b7fe4545de3d15e71cd70ff14b2f1
   languageName: node
   linkType: hard
 

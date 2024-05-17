@@ -12,12 +12,12 @@ if [ "$wsl_version" != "2" ]; then
   wsl --shutdown
 fi
 
-# Загрузка переменных окружения из файла .env.local
-if [ -f "./.env.local" ]; then
+# Загрузка переменных окружения из файла .env
+if [ -f "./.env" ]; then
   echo "Loading environment variables from .env file..."
-  export $(grep -v '^#' .env.local | xargs)
+  export "$(grep -v '^#' .env | xargs)"
 else
-  echo "Error: .env.local file not found!"
+  echo "Error: .env file not found!"
   exit 1
 fi
 
