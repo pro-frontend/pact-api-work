@@ -1,0 +1,162 @@
+{
+  "consumer": {
+    "name": "FrontendWebsiteV3"
+  },
+  "interactions": [
+    {
+      "description": "get all filters config",
+      "request": {
+        "method": "GET",
+        "path": "/filters/getFiltersConfig"
+      },
+      "response": {
+        "body": [
+          {
+            "defaultValues": null,
+            "list": [
+              {
+                "count": 1,
+                "currentPage": 1,
+                "pagesCount": 1,
+                "values": [
+                  {
+                    "elementId": "JBHVBHGVGHVVHVHDBJCN",
+                    "name": "Воронеж",
+                    "value": "Воронеж"
+                  }
+                ]
+              }
+            ],
+            "title": "Отделение",
+            "type": "singleSelect"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type",
+                  "min": 1
+                }
+              ]
+            },
+            "$[*].defaultValues": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "null"
+                }
+              ]
+            },
+            "$[*].list": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type",
+                  "min": 1
+                }
+              ]
+            },
+            "$[*].list[*].count": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "number"
+                }
+              ]
+            },
+            "$[*].list[*].currentPage": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "number"
+                }
+              ]
+            },
+            "$[*].list[*].pagesCount": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "number"
+                }
+              ]
+            },
+            "$[*].list[*].values": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type",
+                  "min": 1
+                }
+              ]
+            },
+            "$[*].list[*].values[*].elementId": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$[*].list[*].values[*].name": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$[*].list[*].values[*].value": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$[*].title": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$[*].type": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "/singleSelect|infiniteSingleSelect|multiSelect|infiniteMultiSelect|range|date/"
+                }
+              ]
+            }
+          },
+          "header": {},
+          "status": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.5.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.20",
+      "models": "1.2.0"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "BackendServiceV3"
+  }
+}
