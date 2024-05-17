@@ -13,6 +13,7 @@
 		"@types/react": "^18.3.1",
 		"@types/react-dom": "^18.3.0",
 		"axios": "^1.6.8",
+		"dotenv": "^16.4.5",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-scripts": "5.0.1",
@@ -30,7 +31,8 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"make:runnable": "chmod +x publish.sh",
-		"publish": "yarn run make:runnable && ./publish.sh"
+		"publish.sh": "yarn run make:runnable && ./publish.sh",
+		"pact:publish": "node ./publish.pact.js"
 	},
 	"eslintConfig": {
 		"extends": [
