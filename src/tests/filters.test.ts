@@ -8,8 +8,8 @@ import { FiltersService } from '../api/FiltersService';
 const { eachLike, like, string, number, boolean, nullValue, regex } = MatchersV3;
 
 const provider = new PactV3({
-  consumer: 'FrontendWebsiteV2',
-  provider: 'BackendServiceV2',
+  consumer: 'FrontendWebsiteV3',
+  provider: 'BackendServiceV3',
   dir: path.resolve(process.cwd(), 'pacts'),
 });
 
